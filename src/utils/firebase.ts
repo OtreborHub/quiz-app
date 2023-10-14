@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { Database, getDatabase } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -9,6 +10,7 @@ import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyApQv59346AOnHwvRlRsnUBNkHNfLO707I",
   authDomain: "climate-quiz.firebaseapp.com",
+  databaseURL: "https://climate-quiz-default-rtdb.europe-west1.firebasedatabase.app/",
   projectId: "climate-quiz",
   storageBucket: "climate-quiz.appspot.com",
   messagingSenderId: "941341482024",
@@ -18,13 +20,14 @@ const firebaseConfig = {
 
 var app;
 var analytics;
-var db;
+var db: Database;
 
 // Initialize Firebase
 export default function initFirebase(){
   app = initializeApp(firebaseConfig);
   analytics = getAnalytics(app);
-//   db = getDatabase(app);
+  db = getDatabase(app);
 }
 
 export {app, analytics, db};
+

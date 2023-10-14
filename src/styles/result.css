@@ -1,0 +1,45 @@
+.result-image-container{
+    background-color: whitesmoke;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+[data-image-type="A"] {
+    background-color: #e0f540;
+}
+  
+[data-image-type="E"] {
+    background-color: #b4e93a;
+}
+
+[data-image-type="I"] {
+    background-color: #8cef28;
+}
+
+[data-image-type="M"] {
+    background-color: #8cef28;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:"2rem";
+}
+
+.animated-text {
+    animation: textAnimation 1s linear;
+}
+  
+@keyframes textAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

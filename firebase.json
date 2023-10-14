@@ -1,6 +1,18 @@
 {
   "hosting": {
     "public": "build",
+    "redirects": [
+      {
+        "source": "/quiz",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/result",
+        "destination": "/",
+        "type": 301
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -1,0 +1,115 @@
+{
+    "quiz": [
+        {
+            "id": 0,
+            "quest": "Quale delle seguenti azioni contribuisce maggiormente a ridurre l'impronta di carbonio personale?",
+            "options" : [
+                "Utilizzare l'automobile invece del trasporto pubblico",
+                "Ridurre il consumo di carne",
+                "Aumentare il consumo di plastica",
+                "Sostituire le lampadine tradizionali con quelle a LED"
+            ],
+            "answer": "Ridurre il consumo di carne"
+        },
+        {
+            "id": 1,
+            "quest": "Quale processo naturale contribuisce principalmente all'effetto serra?",
+            "options" : [
+                "Respiro degli animali",
+                "Attività vulcanica",
+                "Deforestazione",
+                "Combustione di carburanti fossili"
+            ],
+            "answer": "Combustione di carburanti fossili"
+        },
+        {
+            "id": 2,
+            "quest": "Qual è il termine utilizzato per descrivere la perdita di biodiversità causata dall'attività umana?",
+            "options" : [
+                "Erosione del suolo",
+                "Inquinamento atmosferico",
+                "Estinzione",
+                "Riscaldamento globale"
+            ],
+            "answer": "Estinzione"
+        },
+        {
+            "id": 3,
+            "quest": "Quale materiale è più facilmente riciclabile?",
+            "options" : [
+                "Vetro",
+                "Plastica",
+                "Carta",
+                "Alluminio"
+            ],
+            "answer": "Alluminio"
+        },
+        {
+            "id": 4,
+            "quest": "Qual è il principale gas serra responsabile del riscaldamento globale?",
+            "options" : [
+                "Azoto",
+                "Metano",
+                "Ossigeno",
+                "Argon"
+            ],
+            "answer": "Metano"
+        },
+        {
+            "id": 5,
+            "quest": "Qual è la principale fonte di inquinamento dell'aria nelle aree urbane?",
+            "options" : [
+                "Emissioni industriali",
+                "Trasporto su strada",
+                "Riscaldamento domestico",
+                "Incendi forestali"
+            ],
+            "answer": "Trasporto su strada"
+        },
+        {
+            "id": 6,
+            "quest": "Qual è il principale fattore di minaccia per gli ecosistemi oceanici?",
+            "options" : [
+                "Inquinamento atmosferico",
+                "Pesca eccessiva",
+                "Acidificazione degli oceani",
+                "Invasioni di specie aliene"
+            ],
+            "answer": "Pesca eccessiva"
+        },
+        {
+            "id": 7,
+            "quest": "Qual è il termine per l'uso efficiente delle risorse senza sprechi?",
+            "options" : [
+                "Economia circolare",
+                "Economia di mercato",
+                "Economia mista",
+                "Economia pianificata"
+            ],
+            "answer": "Economia circolare"
+        },
+        {
+            "id": 8,
+            "quest": "Qual è il principale obiettivo dell'Accordo di Parigi?",
+            "options" : [
+                "Ridurre le emissioni di gas serra per limitare il riscaldamento globale",
+                "Aumentare le emissioni di gas serra per promuovere la crescita economica",
+                "Conservare le foreste pluviali tropicali",
+                "Promuovere l'uso di combustibili fossili"
+            ],
+            "answer": "Ridurre le emissioni di gas serra per limitare il riscaldamento globale"
+        },
+        {
+            "id": 9,
+            "quest": "Quale organismo soffre maggiormente a causa dell'innalzamento del livello del mare causato dal riscaldamento globale?",
+            "options" : [
+                "Umani",
+                "Balene",
+                "Coralli",
+                "Elefanti"
+            ],
+            "answer": "Coralli"
+        }
+
+    ]
+}
