@@ -1,22 +1,21 @@
-import { TextField, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from "react-router-dom";
 import '../styles/home.css';
 
 export default function Home() {
 
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
 
-  const handleNameChange = (event: { target: { value: string; }; }) => {
-    const name = event.target.value;
-    setName(name);
-  }
+  // const handleNameChange = (event: { target: { value: string; }; }) => {
+  //   const name = event.target.value;
+  //   setName(name);
+  // }
 
   const isMobile = useMediaQuery({ query: '(max-width: 900px)' });
-  const isDesktop = useMediaQuery({ query: '(min-width: 900px)' });
+  // const isDesktop = useMediaQuery({ query: '(min-width: 900px)' });
 
   return (  
     <div className='home-container'>
@@ -56,8 +55,8 @@ export default function Home() {
                   sx={{ margin: "1rem", width: "75%", backgroundColor:"#ffffff46"}}
                   onChange={handleNameChange}
                   /> */}
-              <Box width={"25%"} alignSelf={"center"}>
-                <Link to={"/quiz"} state={{name: name}}>
+              <Box width={"50%"} alignSelf={"center"}>
+                <Link to={"/quiz"}>
                     <Button 
                         sx={{marginTop:"1rem"}}
                         variant="contained" 
