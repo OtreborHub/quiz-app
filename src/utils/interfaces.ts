@@ -21,6 +21,7 @@ interface QuestionProps {
 interface ResultValue {
     score: number,
     title: ResultTitle,
+    passed: boolean,
     phrase: string
 }
 
