@@ -1,15 +1,19 @@
 .accent {
-    color: rgb(57, 147, 15); 
+    color: #39930f; 
 }
 
 .animated-text {
-    animation: textAnimation 1s linear;
+    animation: textAnimation 0.7s linear;
 }
 
 @keyframes textAnimation {
     0% {
         opacity: 0;
         transform: translateY(-20px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-10px);
     }
     100% {
         opacity: 1;
