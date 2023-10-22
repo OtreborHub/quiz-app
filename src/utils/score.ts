@@ -9,20 +9,13 @@ enum ResultTitle {
 
 function parseScore(score: number){
     switch(score){
-        case 0:
-        case 1:
-        case 2:
+        case 0: case 1: case 2:
             return ResultTitle.APPRENDISTA;
-        case 3:
-        case 4:
-        case 5:
+        case 3: case 4: case 5:
             return ResultTitle.ESPLORATORE;
-        case 6:
-        case 7:
-        case 8:
+        case 6: case 7: case 8:
             return ResultTitle.INNOVATORE;
-        case 9:
-        case 10:
+        case 9: case 10:
             return ResultTitle.MAESTRO;
         default:
             return ResultTitle.NONE;
@@ -36,4 +29,14 @@ function classSubstring(title: ResultTitle){
     return "";
 }
 
-export {parseScore, classSubstring, ResultTitle}
+function calculateScore(scoreArray: boolean[]): number{
+    var score = 0
+    scoreArray.forEach((value) => {
+        if(value){
+            score++;
+        }
+    });
+    return score;
+}
+
+export {calculateScore, parseScore, classSubstring, ResultTitle}

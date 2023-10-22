@@ -1,24 +1,9 @@
-.result-image-container{
-    background-color: whitesmoke;
+.result-container{
+    background-image: url('../assets/img/backgrounds/result.png');
     background-size: cover;
+    background-position: center;
     width: 100%;
     height: 100vh;
-}
-
-[data-image-type="A"] {
-    background-color: #e0f540;
-}
-  
-[data-image-type="E"] {
-    background-color: #b4e93a;
-}
-
-[data-image-type="I"] {
-    background-color: #8cef28;
-}
-
-[data-image-type="M"] {
-    background-color: #8cef28;
 }
 
 .text-container {
@@ -26,17 +11,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top:"2rem";
+}
+
+.accent {
+    color: #39930f; 
 }
 
 .animated-text {
     animation: textAnimation 1s linear;
 }
-  
+
 @keyframes textAnimation {
     0% {
         opacity: 0;
         transform: translateY(-20px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-10px);
     }
     100% {
         opacity: 1;
