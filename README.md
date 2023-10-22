@@ -1,25 +1,28 @@
 # Climate Quiz
-quiz-app è un applicativo React scritto in Typescript realizzato per Start2Impact University.
+quiz-app is a React application written in TypeScript, developed for Start2Impact University. It is available, only in italian language, here: https://climate-quiz.web.app/
 
-L'applicativo è composto da 3 pagine principali:
-- Home: questo è il componente iniziale. Nella Home abbiamo una breve introduzione amichevole e la possibilità di settare il livello del quiz che affronteremo. I livelli di difficoltà disponibili sono Facile, Intermedio e Difficile e una volta avviato il quiz, il livello sarà passato nello stato di navigazione (vedi *handleNavigation()*)
+The application consists of three main pages:
 
-- Quiz: componente padre di Question, gestisce l'impaginazione delle domande (Mobile/Desktop) e gestisce gli eventi di click in corrispondenza di una risposta: 
-I dati relativi ai quesiti sono recuperati da un Realtime Database di Firebase (vedi *db.json*) e gestiti con l'interfaccia QuizData. 
-Ad ogni risposta data, l'applicativo mostrerà un nuovo quesito, 
-cambiando l'indice dell'Array di QuizData e passando i dati al figlio Question tramite l'interfaccia QuestionProps (vedi *interfaces.ts*). Al decimo quesito l'utente verrà reindirizzato sulla pagina Result: nello stato troveremo il livello di difficoltà e il punteggio ottenuto in decimi. E' sempre possibile tornare alla pagina precedente con l'icona < posta accanto al numero della domanda.
+- Home: This is the initial component. In the Home, we have a brief and friendly introduction and the option to set the difficulty level for the quiz. The available difficulty levels are Easy, Intermediate, and Difficult. Once the quiz is started, the selected level will be passed to the navigation state (see *handleNavigation()*).
 
-- Result: componente che utilizza l'interfaccia ResultValue e l'enum ResulTitle per valorizzare i dati in pagina. I testi relativi al risultato e ai suggerimenti sono recuperati dal Realtime Database citato sopra. Mentre i risultati sono frasi fisse, i suggerimenti (Tip) sono pescati da una pool di 5 elementi a DB. Fa eccezione il suggerimento estratto per aver raggiunto il massimo risultato al livello difficile. In questo caso il suggerimento sarà un messaggio motivazionale (vedi *bestResult()*).
-Il componente contiene 4 pulsanti con le seguenti funzionalità:
-    * Ricominciare il test corrente: torna alla pagina servita dal componente Quiz, con la stessa difficoltà
-    * Livello Successivo: torna alla pagina servita dal componente Quiz, con la difficoltà aumentata di un livello. 
-    Nota: alla conclusione del quiz a livello Difficile, il pulsante non comparirà.
-    * Condividi: copia sulla clipboard un messaggio da poter copiare in chat o condividere sui social. Un setInterval disabilita il pulsante per circa 10 secondi dopo il click.
-    * Torna alla Home: riporta l'utente alla pagina iniziale.
+- Quiz: This is the parent component for the Questions and it manages the pagination of questions for both mobile and desktop. It handles click events for answers. Question data is retrieved from a Realtime Database in Firebase (see *db.json*) and managed using the QuizData interface. After each answer is provided, the application displays a new question by changing the index in the QuizData array and passing the data to the child component Question through the QuestionProps interface (see *interfaces.ts*). When the user answers the tenth question, they will be redirected to the Result page. In the state, you will find the selected difficulty level and the score obtained in tenths. It's always possible to return to the previous page by clicking the arrow icon next to the question number.
 
-Il progetto utilizza la libreria react-router-dom e implementa svariati useEffect Hook per inizializzare i componenti e useState per gestire gli stati della pagina. 
+- Result: This component uses the ResultValue interface and the ResulTitle enum to populate data on the page. Texts related to results and tips are retrieved from the Realtime Database mentioned earlier. While the results are fixed phrases, the tips are selected from a pool of five elements in the database. An exception is made for the tip provided when achieving the maximum score in the difficult level. In this case, the tip will be a motivational message (see *bestResult()*). The component includes four buttons with the following functionalities:
 
-Per semplicitià si è preferito utilizzare gli stati di navigazione come gestione delle variabili globali.
-Lo stile è costituito principalmente da oggetti del framework Material UI con l'utilizzo dei @keyframes per le animazioni dei testi.
+    * Restart the test: Returns to the page served by the Quiz component with the same difficulty level.
+
+    * Next Level: Returns to the page served by the Quiz component with the difficulty level increased by one. This button will not appear upon completing the Difficult level quiz.
+
+    * Share: Copies a message to the clipboard that can be pasted in chat or shared on social media. A setInterval disables the button for about 10 seconds after clicking it.
+
+    * Return to Home: Takes the user back to the initial page.
+
+The project uses the react-router-dom library and implements several useEffect Hooks to initialize components and useState to manage page states.
+
+For simplicity, navigation states are preferred for managing global variables. The style primarily consists of Material UI framework objects with the use of @keyframes for text animations.
+
+To run the project locally, simply download it and execute:
+- npm install
+- npm start
 
 
