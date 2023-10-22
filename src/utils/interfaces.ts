@@ -1,3 +1,5 @@
+import { ResultTitle } from "./score";
+
 //Interfaccia per il recupero dati da DB
 interface QuizData {
     id: number,
@@ -15,4 +17,11 @@ interface QuestionProps {
     prevQuestion: () => void;
 }
 
-export type { QuizData, QuestionProps }
+//Interfaccia per la pagina dei risultati
+interface ResultValue {
+    score: number,
+    title: ResultTitle,
+    phrase: string
+}
+
+export type { QuizData, QuestionProps, ResultValue }
