@@ -25,7 +25,7 @@ export default function Home() {
     } 
   };
 
-  function goNext(){
+  function handleNavigation(){
     navigate("/quiz", { state: { level: level }} );
   }
 
@@ -80,7 +80,7 @@ export default function Home() {
                       sx={{fontSize:"1.3rem", fontWeight:"bold"}}
                       variant="text" 
                       color="success"
-                      onClick={() => goNext()}>
+                      onClick={() => handleNavigation()}>
                       VAI AL QUIZ
                   </Button>
               </Box>

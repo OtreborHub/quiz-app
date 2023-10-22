@@ -1,16 +1,11 @@
 
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Box, Grid, IconButton, List, ListItemButton, ListItemText, Typography } from "@mui/material";
+import { QuestionProps } from '../utils/interfaces';
 
-interface questionProps {
-    index: number;
-    quest: string;
-    answers: string[];
-    ansQuestion: (answer: string) => void;
-    prevQuestion: () => void;
-}
 
-export default function Question({ index, quest, answers, ansQuestion, prevQuestion }: questionProps) {
+
+export default function Question({ index, quest, answers, ansQuestion, prevQuestion }: QuestionProps) {
 
     function getLetter(id: number) {
         switch (id) {
@@ -26,6 +21,8 @@ export default function Question({ index, quest, answers, ansQuestion, prevQuest
                 return "error";
         }
     }
+
+
 
     return (
         <>
@@ -54,8 +51,8 @@ export default function Question({ index, quest, answers, ansQuestion, prevQuest
                             key={index + "index"}
                             color={"whitesmoke"}
                             textAlign={"center"}>
-                                {index < 9 ? "0" : ""}
-                                <span className="accent"><b>{index + 1}</b></span>
+                                {index !== undefined && index < 9 ? "0" : ""}
+                                <span className="accent"><b>{index !== undefined && index + 1}</b></span>
                             </Typography>
                         </Box>
                     </Grid>

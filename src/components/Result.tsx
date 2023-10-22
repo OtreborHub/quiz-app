@@ -3,7 +3,7 @@ import { Box, Button, Typography } from '@mui/material';
 import { onValue, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from 'react-responsive';
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import ApprendistaPNG from "../assets/img/characters/Apprendista.png";
 import EsploratorePNG from "../assets/img/characters/Esploratore.png";
 import InnovatorePNG from "../assets/img/characters/Innovatore.png";
@@ -24,16 +24,17 @@ export default function Result() {
     const [result, setResult] = useState<ResultValue>({score: -1, title: ResultTitle.NONE, phrase: ""});
     const [copied, setCopied] = useState<boolean>(false);
     const [tipPhrase, setTipPhrase] = useState<string>();
-    const params = useParams();
+    // const params = useParams();
 
     const isMobile = useMediaQuery({ query: '(max-width: 900px)' });
 
     const navigate = useNavigate();
     const location = useLocation();
     const level = location.state.level;
+    const score = location.state.score;
 
     useEffect(() => {
-        const score = Number(params.score);
+        // const score = Number(params.score);
         const title = parseScore(score);
         var resultPhrase: string = "";
 
