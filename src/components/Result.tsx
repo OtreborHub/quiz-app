@@ -12,12 +12,7 @@ import "../styles/result.css";
 import { db } from '../utils/firebase';
 import { Level, getNextLevel } from '../utils/level';
 import { ResultTitle, parseScore } from "../utils/score";
-
-interface ResultValue {
-    score: number,
-    title: ResultTitle,
-    phrase: string
-}
+import { ResultValue } from '../utils/interfaces';
 
 export default function Result() {
 
