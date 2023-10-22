@@ -3,26 +3,23 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import '../styles/home.css';
-import { Level } from '../utils/level';
+import { Level, changeLevel } from '../utils/level';
 
 export default function Home() {
   
   const navigate = useNavigate();
   const [level, setLevel] = useState<Level>(Level.EASY);
+  
+  const location = useLocation();
+  const baseLevel = location.state && location.state.level ? location.state.level : Level.EASY  ;
 
   const isMobile = useMediaQuery({ query: '(max-width: 900px)' });
   // const isDesktop = useMediaQuery({ query: '(min-width: 900px)' });
 
   function handleChangeLevel(level: string){
-    if(level === Level.EASY){
-      setLevel(Level.INTERMEDIATE);
-    } else if (level === Level.INTERMEDIATE) {
-      setLevel(Level.DIFFICULT);
-    } else if (level === Level.DIFFICULT) {
-      setLevel(Level.EASY);
-    } 
+    setLevel(changeLevel(level, baseLevel));
   };
 
   function handleNavigation(){

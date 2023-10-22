@@ -16,7 +16,7 @@ import { ResultValue } from '../utils/interfaces';
 
 export default function Result() {
 
-    const [result, setResult] = useState<ResultValue>({score: -1, title: ResultTitle.NONE, phrase: ""});
+    const [result, setResult] = useState<ResultValue>({score: -1, title: ResultTitle.NONE, passed: false, phrase: ""});
     const [copied, setCopied] = useState<boolean>(false);
     const [tipPhrase, setTipPhrase] = useState<string>();
     // const params = useParams();
@@ -36,7 +36,7 @@ export default function Result() {
         const queryResult = ref(db, "result/"+title.toLocaleLowerCase());
         onValue(queryResult, (snapshot) => {
           resultPhrase = snapshot.val();
-          const result:ResultValue = {score: score, title: title, phrase: resultPhrase}
+          const result:ResultValue = {score: score, title: title, passed: score > 5, phrase: resultPhrase}
           setResult(result);
         });
 
@@ -62,7 +62,8 @@ export default function Result() {
             const nextLevel = getNextLevel(level);
             navigate("/quiz", { state : {level: nextLevel}});
         } else if (event.target.id === 'homeButton') {
-            navigate("/");
+            const baseLevel = result.passed ? getNextLevel(level) : level;
+            navigate("/", { state: {level: baseLevel}});
         }
     }
 
@@ -131,7 +132,7 @@ export default function Result() {
                             {isMobile ? "Riprova" : "Ricomincia il test"}
                         </Button>
                         
-                        { level !== Level.DIFFICULT &&
+                        { level !== Level.DIFFICULT && result.passed &&
                             <Button
                             id="nextLevelButton"
                             variant={isMobile ? "text": "contained"}
@@ -166,7 +167,7 @@ export default function Result() {
                         <Button
                             id="homeButton"
                             onClick={(event) => handleNavigation(event)}
-                            sx={{color: "white"}}
+                            sx={{color: "white", fontWeight:"bold"}}
                             variant='text'
                         > TORNA ALLA HOME</Button>
                     </Box>
