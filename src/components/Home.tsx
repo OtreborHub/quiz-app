@@ -13,7 +13,7 @@ export default function Home() {
   const [level, setLevel] = useState<Level>(Level.EASY);
   
   const location = useLocation();
-  const baseLevel = location.state &&location.state.level ? location.state.level : Level.EASY  ;
+  const baseLevel = location.state && location.state.level ? location.state.level : Level.EASY  ;
 
   const isMobile = useMediaQuery({ query: '(max-width: 900px)' });
   // const isDesktop = useMediaQuery({ query: '(min-width: 900px)' });
