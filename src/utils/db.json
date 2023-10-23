@@ -115,7 +115,7 @@
         "intermedio" : [
             {
                 "id": 0,
-                "quest": "Quale delle seguenti azioni contribuisce maggiormente a ridurre l'impronta di carbonio personale?",
+                "quest": "Quale delle seguenti azioni contribuisce maggiormente a ridurre l'impronta di carbonio?",
                 "options" : [
                     "Utilizzare l'automobile invece del trasporto pubblico",
                     "Ridurre il consumo di carne",
@@ -126,7 +126,7 @@
             },
             {
                 "id": 1,
-                "quest": "Quale processo naturale contribuisce principalmente all'effetto serra?",
+                "quest": "Quale processo contribuisce principalmente all'effetto serra?",
                 "options" : [
                     "Respiro degli animali",
                     "Attività vulcanica",
@@ -137,7 +137,7 @@
             },
             {
                 "id": 2,
-                "quest": "Qual è il termine utilizzato per descrivere la perdita di biodiversità causata dall'attività umana?",
+                "quest": "Qual è il termine utilizzato per descrivere la perdita di biodiversità?",
                 "options" : [
                     "Erosione del suolo",
                     "Inquinamento atmosferico",
