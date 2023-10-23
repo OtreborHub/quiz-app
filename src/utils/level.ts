@@ -9,6 +9,7 @@ function getNextLevel(currentLevel: Level){
     switch(currentLevel){
         case Level.EASY: return Level.INTERMEDIATE;
         case Level.INTERMEDIATE: return Level.DIFFICULT;
+        case Level.DIFFICULT: return Level.DIFFICULT;
         default: return Level.EASY;
     }
 }
