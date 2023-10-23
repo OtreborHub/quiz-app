@@ -52,7 +52,7 @@ export default function Home() {
                   fontSize={isMobile ? "1.2rem" : "1.5rem"}
                   color={"whitesmoke"}>
                     10 domande, 4 opzioni, 1 risposta esatta: i temi sono ecosostenibilità, ambiente, cambiamenti climatici ed energia rinnovabile.<br/>
-                    Scegli la difficoltà e quando ti senti pronto partiamo. <br/> Dai il meglio di te e condividi il risultato con i tuoi amici!
+                    Dopo ogni livello di diffoltà sbloccherai quello successivo: <br/> Dai il meglio di te fin dall'inizio e condividi il risultato con i tuoi amici!
                 </Typography>
               {/* <TextField
                   label="Nome" 
